@@ -3,3 +3,6 @@ __pycache__/
 .env
 venv/
 *.egg-info/
+*.docx
+*.wmv
+*.mp4
