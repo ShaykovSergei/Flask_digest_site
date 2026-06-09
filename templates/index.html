@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-дайджест для новичков</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">◆</span>
+          <h1>AI-дайджест</h1>
+        </div>
+        <p class="header-subtitle">Нейросети, Claude Code, промпты и первые проекты — простым языком</p>
+      </div>
+      <div class="controls">
+        <div class="search-wrapper">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search" class="search-input" placeholder="Поиск карточек..." autocomplete="off">
+        </div>
+        <div class="tags-filter" id="tagsFilter"></div>
+      </div>
+      <div class="stats">
+        <span id="cardCount" class="card-count">Найдено: 0</span>
+        <button id="resetBtn" class="reset-btn">Сбросить фильтры ✕</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="cards-grid" id="cardsGrid">
+        <div class="loader">
+          <div class="loader-ring"></div>
+          <p>Загружаем карточки...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>AI-дайджест для новичков — учимся работать с нейросетями вместе 🚀</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
